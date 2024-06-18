@@ -1,0 +1,9 @@
+{
+  "server-component": {
+    "welcome": "French"
+  },
+  "counter": {
+    "increment": "Přidat",
+    "decrement": "Ubrat"
+  }
+}
