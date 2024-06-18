@@ -1,6 +1,5 @@
 import { getDictionary } from "../../get-dictionary";
-import Counter from "./components/counter";
-import LocaleSwitcher from "./components/locale-switcher";
+import HomePage from "@/components/HomePage";
 
 export default async function IndexPage({ params }) {
   const { lang } = params;
@@ -8,13 +7,12 @@ export default async function IndexPage({ params }) {
 
   return (
     <div>
-      <LocaleSwitcher />
       <p>Current locale: {lang}</p>
       <p>
         This text is rendered on the server:{" "}
         {dictionary["server-component"].welcome}
       </p>
-      <Counter dictionary={dictionary.counter} />
+      <HomePage data={dictionary.counter} />
     </div>
   );
 }

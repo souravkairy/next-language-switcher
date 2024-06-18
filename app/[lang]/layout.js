@@ -1,3 +1,4 @@
+import LocaleSwitcher from "@/components/locale-switcher";
 import { i18n } from "../../i18n-config";
 
 export async function generateStaticParams() {
@@ -7,7 +8,13 @@ export async function generateStaticParams() {
 export default function Root({ children, params }) {
   return (
     <html lang={params.lang}>
-      <body>{children}</body>
+      <body>
+        <div className=" bg-gray-300">
+          <LocaleSwitcher />
+        </div>
+
+        {children}
+      </body>
     </html>
   );
 }

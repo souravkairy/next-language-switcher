@@ -16,7 +16,6 @@ function getLocale(request) {
   );
 
   const locale = matchLocale(languages, locales, i18n.defaultLocale);
-
   return locale;
 }
 
