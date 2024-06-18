@@ -29,22 +29,22 @@ export default function LocaleSwitcher() {
       <span className="flex justify-center font-din font-thin text-lg leading-none">
         {pathName.startsWith("/fr") || pathName.startsWith("/fr/") ? (
           pathName.startsWith("/fr/politique-de-confidentialite") ? (
-            <a href="/en/privacy-policy" className="text-body-1">
+            <Link href="/en/privacy-policy" className="text-body-1">
               English
-            </a>
+            </Link>
           ) : (
             <a href="en/" className="text-body-1">
               English
             </a>
           )
         ) : pathName.startsWith("/en/privacy-policy") ? (
-          <a href="/fr/politique-de-confidentialite" className="text-body-1">
+          <Link href="/fr/politique-de-confidentialite" className="text-body-1">
             Français
-          </a>
+          </Link>
         ) : (
-          <a href="/fr" className="text-body-1">
+          <Link href="/fr" className="text-body-1">
             Français
-          </a>
+          </Link>
         )}
       </span>
     </div>
